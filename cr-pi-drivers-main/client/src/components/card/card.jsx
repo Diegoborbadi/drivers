@@ -1,12 +1,13 @@
   import React from 'react';
+  import {Link} from "react-router-dom"
   import "./card.style.css"
   
-  const Card = ({driver}) => {
-    const{name,image} = driver;
+  const Card = ({ driver, id }) => {
+    const { name, image } = driver;
     return (
       <div className='card-container'>
         <img src={image} alt={image} />
-        <h2>{name}</h2>
+        <Link to={`/drivers/${id}`}><h2>{name}</h2></Link>
       </div>
     );
   }

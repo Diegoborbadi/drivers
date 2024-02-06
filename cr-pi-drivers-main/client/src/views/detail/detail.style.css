@@ -1,0 +1,44 @@
+.container {
+    max-width: 500px;
+    background-color: yellow;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+  }
+  
+  .driver-info {
+    margin-bottom: 20px;
+  }
+  
+  .driver-info h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .driver-info h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #555;
+  }
+  
+  .driver-image img {
+    width: auto; /* Ajusta el ancho al 100% del contenedor */
+    max-height: 200px; /* Establece una altura máxima para evitar que las imágenes sean demasiado grandes */
+    object-fit: cover; /* Mantiene la proporción de aspecto original y cubre el área designada */
+    border-radius: 8px; /* Opcional: Agrega bordes redondeados */
+    margin-bottom: 10px; /* Agrega margen inferior para separar la imagen del texto */
+  }
+  
+  
+  .driver-details {
+    margin-top: 20px;
+  }
+  
+  .driver-details label {
+    font-weight: bold;
+  }
+  
+  .driver-details p {
+    margin: 5px 0;
+  }

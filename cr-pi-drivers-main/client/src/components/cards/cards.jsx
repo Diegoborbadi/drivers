@@ -7,7 +7,7 @@ const Cards = ({allDrivers}) => {
   const driverList = allDrivers
   return (
     <div className='cards-list'>
-      {driverList?.map((driver)=>(<Card driver={driver}/>))}
+      {driverList?.map((driver)=>(<Card key={driver.id} driver={driver} id={driver.id}/>))}
     </div>
   );
 }

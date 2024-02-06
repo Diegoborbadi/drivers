@@ -2,6 +2,8 @@
 export const GET_DRIVERS = "GET_DRIVERS"
 export const GET_DRIVER_BY_ID = "GET_DRIVER_BY_ID"
 export const GET_FILTERS_ASCEND_DRIVERS = "GET_FILTERS_ASCEND_DRIVERS"
+export const PAGINATE = "PAGINATE"
+export const GET_DRIVER_DETAIL = "GET_DRIVER_DETAIL"
 
 import axios from "axios"
 
@@ -29,6 +31,30 @@ export function getDriversById(id){
 export const orderAlfabeticamente = (order) => {
     return { type: GET_FILTERS_ASCEND_DRIVERS, payload: order };
   };
+
+
+export function page(order){
+    return function(dispatch){
+    dispatch({
+        type:PAGINATE,
+        payload:order 
+    })
+    }
+}
+
+
+export function getDriverDetail(id){
+    return async function(dispatch){
+        const response = await axios(`http://localhost:3001/drivers/${id}`)
+    return dispatch({
+        type:"GET_DRIVER_DETAIL",
+        payload:response.data
+    })
+    }
+}
+
+
+
 
 
 
